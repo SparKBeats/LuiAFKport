@@ -1,0 +1,22 @@
+[h1]THIS MOD IS DISCONTINUED. I WON'T CONTINUE TO ADD STUFF FROM LUIAFK TO IT. I WILL ONLY UPDATE IT IF IT'S BUGGY OR IT NEEDS A PORT.[/h1]
+
+[b]Added every accesory in Luiafk:
+[list]
+[*]Unlimited Mana 0-5 (Mana and Magic Essences have a 50% chance to drop from Duke Fishron and Moon Lord)
+[*]Faster Mining
+[*]Tool Time
+[*]Home Improvement
+[/list]
+Added the more important "when in inventory" effect items :
+[list]
+[*]Loot Magnet (50% chance to drop from WoF)
+[*]Money Collector (Sold by the traveling merchant)
+[/list]
+Added Ultimate Battler and Ultimate Peaceful. 
+Their effects activate when you favorite them (Alt + m1).
+
+On top of that added a few minor gameplay tweaks, like all the accessories leading up to the crafting of the Cell Phone and the Cell Phone itself working from the banks, and other changes that are not worth listing.[/b]
+
+I never got Lui's permission for this and most of the code belongs to him.
+
+Check out [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2797518634]Quality of Life[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2831752947&searchtext=luiafk]LuiAFK Reborn[/url], they're the better versions.

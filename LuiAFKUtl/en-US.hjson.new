@@ -1,0 +1,128 @@
+
+Mods: {
+	LuiAFKUtl: {
+		Items: {
+			FasterMining: {
+				DisplayName: Dig Faster
+				Tooltip: Mining speed increased by 33%.
+			}
+
+			SuperToolTime: {
+				DisplayName: Home Improvement
+				Tooltip: Everything is faster.
+			}
+
+			ToolTime: {
+				DisplayName: Tool Time!
+				Tooltip:
+					'''
+					Tool, painting, tile, and wall speed increased.
+					Range increased.
+					'''
+			}
+
+			UnlimitedManaAccessory: {
+				DisplayName: Unlimited Mana
+				Tooltip:
+					'''
+					Unlimited mana.
+					Magic damage reduced by 30%.
+					'''
+			}
+
+			UnlimitedManaAccessory1: {
+				DisplayName: Unlimited Mana 1
+				Tooltip:
+					'''
+					Unlimited mana.
+					Magic damage reduced by 20%.
+					'''
+			}
+
+			UnlimitedManaAccessory2: {
+				DisplayName: Unlimited Mana 2
+				Tooltip:
+					'''
+					Unlimited mana.
+					Magic damage reduced by 10%.
+					'''
+			}
+
+			UnlimitedManaAccessory3: {
+				DisplayName: Unlimited Mana 3
+				Tooltip:
+					'''
+					Unlimited mana.
+					Magic damage reduced by 5%.
+					'''
+			}
+
+			UnlimitedManaAccessory4: {
+				DisplayName: Unlimited Mana 4
+				Tooltip: Unlimited mana.
+			}
+
+			UnlimitedManaAccessory5: {
+				DisplayName: Unlimited Mana 5
+				Tooltip:
+					'''
+					Unlimited mana.
+					Magic damage increased by 10%.
+					Magic crit increased by 10%.
+					'''
+			}
+
+			LootMagnet: {
+				DisplayName: Loot Magnet
+				Tooltip: Loots everything.
+			}
+
+			MagicEssence: {
+				DisplayName: Magic Essence
+				Tooltip:
+					'''
+					Imbued with magical power.
+					Smells a little like cheese.
+					'''
+			}
+
+			ManaEssence: {
+				DisplayName: Mana Essence
+				Tooltip:
+					'''
+					Imbued with magical power.
+					Smells a little like fish.
+					'''
+			}
+
+			MoneyCollector: {
+				DisplayName: Money Collector
+				Tooltip:
+					'''
+					Automatically places any coins picked up into your Piggy Bank.
+					If you don't have enough space in your Piggy Bank it does nothing.
+					'''
+			}
+
+			UltimateBattler: {
+				DisplayName: Ultimate Battler
+				Tooltip:
+					'''
+					Are you sure you can handle this?
+					Massively increased spawns.
+					Favorite this item to toggle the effect.
+					'''
+			}
+
+			UltimatePeaceful: {
+				DisplayName: Ultimate Peaceful
+				Tooltip:
+					'''
+					It's oh so quiet.
+					Greatly reduced spawns.
+					Favorite this item to toggle the effect.
+					'''
+			}
+		}
+	}
+}

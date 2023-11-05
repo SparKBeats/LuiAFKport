@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "+ARNJ7QTDf2O3TwwgUeAYpbszglDdwD6uQXutfBIEk6Sp9+g/ha9KKq7fyYR+ePhFtqMnXEIr5mJ3c2AVToOTA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ASUS M570DD\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\LuiAFKUtl\\LuiAFKUtl.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS M570DD\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}

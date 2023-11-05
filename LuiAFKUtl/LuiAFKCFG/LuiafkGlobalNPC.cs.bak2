@@ -1,0 +1,101 @@
+using LuiAFKUtl.Content.Items.Drops;
+using LuiAFKUtl.Content.Items.Misc;
+using LuiAFKUtl.Content.Items.TogglePots;
+using Terraria;
+using Terraria.GameContent.ItemDropRules;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace LuiAFKUtl.LuiAFKCFG;
+
+public class LuiafkGlobalNPC : GlobalNPC
+{
+    public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
+    {
+        switch (npc.type)
+        {
+            case 113:
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<LootMagnet>(), 4));
+                break;
+            case 370:
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ManaEssence>(), 2));
+                break;
+            case 398:
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MagicEssence>(), 2));
+                break;
+        }
+    }
+
+    public override void ModifyActiveShop(int type, Chest shop, ref int nextSlot)
+    {
+        switch (type)
+        {
+            case 178:
+                if (Main.bloodMoon || Main.eclipse)
+                {
+                    if (WorldGen.crimson)
+                    {
+                        shop.item[nextSlot].SetDefaults(782, false);
+                        nextSlot++;
+                    }
+                    else
+                    {
+                        shop.item[nextSlot].SetDefaults(784, false);
+                        nextSlot++;
+                    }
+                }
+                if (!WorldGen.crimson)
+                {
+                    shop.item[nextSlot].SetDefaults(2193, false);
+                    nextSlot++;
+                }
+                break;
+            case 20:
+                if (Main.bloodMoon)
+                {
+                    if (WorldGen.crimson)
+                    {
+                        shop.item[nextSlot].SetDefaults(59, false);
+                        nextSlot++;
+                        shop.item[nextSlot].SetDefaults(67, false);
+                        nextSlot++;
+                    }
+                    else
+                    {
+                        shop.item[nextSlot].SetDefaults(2171, false);
+                        nextSlot++;
+                        shop.item[nextSlot].SetDefaults(2886, false);
+                        nextSlot++;
+                    }
+                    return;
+                }
+                break;
+        }
+        if (type == 19 && NPC.AnyNPCs(108))
+        {
+            shop.item[nextSlot].SetDefaults(2177, false);
+            nextSlot++;
+            return;
+        }
+        switch (type)
+        {
+            case 368:
+                shop.item[nextSlot].SetDefaults(ModContent.ItemType<MoneyCollector>(), false);
+                nextSlot++;
+                break;
+        }
+    }
+    public override bool InstancePerEntity
+    {
+        get
+        {
+            return true;
+        }
+    }
+
+    public override void EditSpawnRate(Player player, ref int spawnRate, ref int maxSpawns)
+    {
+        spawnRate = (int)(float)(spawnRate / player.GetModPlayer<LuiafkPlayer>().SpawnRateMultiplier);
+        maxSpawns = (int)(float)(maxSpawns * player.GetModPlayer<LuiafkPlayer>().MaxSpawnsMultiplier);
+    }
+}

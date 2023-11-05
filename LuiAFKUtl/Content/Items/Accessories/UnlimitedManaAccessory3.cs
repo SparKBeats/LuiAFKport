@@ -1,0 +1,56 @@
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace LuiAFKUtl.Content.Items.Accessories;
+
+public class UnlimitedManaAccessory3 : ModItem
+{
+    public override void SetStaticDefaults()
+    {
+        // DisplayName.SetDefault("Unlimited Mana 3");
+        // Tooltip.SetDefault("Unlimited mana.\nMagic damage reduced by 5%.");
+    }
+
+    public override void SetDefaults()
+    {
+        Item.width = 20;
+        Item.height = 30;
+        Item.accessory = true;
+        Item.value = 100000;
+        Item.rare = ItemRarityID.Pink;
+    }
+    public override bool CanEquipAccessory(Player player, int slot, bool modded)
+    {
+        if (slot < 10)
+        {
+            for (int i = 3; i < 10; i++)
+            {
+                if (i != slot && (player.armor[i].type == ModContent.ItemType<UnlimitedManaAccessory1>() || player.armor[i].type == ModContent.ItemType<UnlimitedManaAccessory2>() || player.armor[i].type == ModContent.ItemType<UnlimitedManaAccessory>() || player.armor[i].type == ModContent.ItemType<UnlimitedManaAccessory4>() || player.armor[i].type == ModContent.ItemType<UnlimitedManaAccessory5>()))
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    public override void UpdateAccessory(Player player, bool hideVisual)
+    {
+        player.manaCost *= 0f;
+        player.GetDamage(DamageClass.Magic) -= 0.05f;
+    }
+
+    public override void AddRecipes()
+    {
+        CreateRecipe()
+          .AddIngredient(ModContent.ItemType<UnlimitedManaAccessory2>(), 1)
+          .AddIngredient(ItemID.UnicornHorn, 10)
+          .AddIngredient(ItemID.FallenStar, 10)
+          .AddIngredient(ItemID.CrystalShard, 30)
+          .AddIngredient(ItemID.SoulofMight, 5)
+          .AddIngredient(ItemID.SoulofFright, 5)
+          .AddIngredient(ItemID.SoulofSight, 5)
+          .AddTile(TileID.TinkerersWorkbench)
+          .Register();
+    }
+}
